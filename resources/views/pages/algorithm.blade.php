@@ -38,7 +38,7 @@
                 <div class="w-1/2" x-data="MyAlgorithm()">
                     <div class="mb-6 bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="mb-6 p-6 bg-white border-b border-gray-200">
-                            <form action="{{ route('algoritm.logic') }}" @submit.prevent="submitForm" method="POST">
+                            <form action="{{ route('algorithm.logic') }}" @submit.prevent="submitForm" method="POST">
                                 <div class="mb-6">
                                     <label for="input1" class="block mb-6">Karakter</label>
                                     <input type="text" name="input1" x-model="formData.input1" id="input1" placeholder="ex: ABBCD" value="ABBCD"
@@ -49,14 +49,6 @@
                                     <input type="text" name="input2" x-model="formData.input2" id="input2" placeholder="ex: Gallant Duck" value="Gallant Duck"
                                         class="w-full border rounded text-gray-700 focus:outline-none items-center">
                                 </div>
-
-
-                                <div class="mb-6">
-                                    <label for="message" class="block mb-6">Message</label>
-                                    <input type="text" name="message" x-model="formData.message" id="message" placeholder="//"
-                                        class="w-full border rounded text-gray-700 focus:outline-none items-center">
-                                </div>
-                                <p x-text="message"></p>
 
                                 <div class="mb-6">
                                     <button
@@ -93,15 +85,13 @@
                 formData : {
                     input1 : 'ABBCD',
                     input2 : 'Gallant Duck',
-                    message : 'Hello'
+
                 },
-                message : '',
                 percentage: '',
                 foundedWord: '',
 
                 submitForm() {
-                    this.message = '';
-                    fetch("{{ route('algoritm.logic') }}", {
+                    fetch("{{ route('algorithm.logic') }}", {
                         method: 'POST',
                         headers: {
                         'Content-Type' : 'application/json',
@@ -115,11 +105,9 @@
                         console.log(result)
                         this.foundedWord = `${result.found_no_duplication}`;
                         this.percentage = `${result.percentage}%`;
-                        this.message = "This Success"
                     })
                     .catch((error) => {
                         console.error(error);
-                        this.message = "Failed"
                     })
                 }
             }

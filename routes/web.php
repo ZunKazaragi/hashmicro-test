@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlgorithmController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +23,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/algorithm', [AlgorithmController::class, 'form'])->name('algoritm.form');
-Route::post('/algorithm_ajax', [AlgorithmController::class, 'logic'])->name('algoritm.logic');
+Route::get('/algorithm', [AlgorithmController::class, 'form'])->name('algorithm.form');
+Route::post('/algorithm_ajax', [AlgorithmController::class, 'logic'])->name('algorithm.logic');
+
+Route::resource('product', ProductController::class);
+
 
 require __DIR__.'/auth.php';

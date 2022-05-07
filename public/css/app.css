@@ -636,6 +636,9 @@ select {
 .mt-6 {
   margin-top: 1.5rem;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -702,6 +705,9 @@ select {
 .h-5 {
   height: 1.25rem;
 }
+.h-64 {
+  height: 16rem;
+}
 .h-20 {
   height: 5rem;
 }
@@ -731,6 +737,9 @@ select {
 }
 .w-1\/5 {
   width: 20%;
+}
+.w-4\/5 {
+  width: 80%;
 }
 .w-48 {
   width: 12rem;
@@ -1027,6 +1036,10 @@ select {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1077,6 +1090,10 @@ select {
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 .text-blue-700 {
   --tw-text-opacity: 1;
@@ -1137,6 +1154,10 @@ select {
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+.decoration-blue-800 {
+  -webkit-text-decoration-color: #1e40af;
+          text-decoration-color: #1e40af;
 }
 .antialiased {
   -webkit-font-smoothing: antialiased;
@@ -1208,6 +1229,10 @@ select {
 }
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+.hover\:border-blue-400:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
 .hover\:border-transparent:hover {
   border-color: transparent;

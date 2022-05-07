@@ -31,6 +31,8 @@ Route::middleware(['auth'])->group(function() {
     Route::resource('product', ProductController::class)->except('destroy');
     Route::get('/product/{product}/destroy', [ProductController::class, 'destroy'])->name('product.destroy');
 
-
+    Route::get('/coding-review', function() {
+        return view('pages.review');
+    })->name('review');
 });
 require __DIR__.'/auth.php';

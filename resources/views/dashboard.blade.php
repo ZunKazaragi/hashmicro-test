@@ -46,13 +46,13 @@
                     <tr>
                         <th class="border border-slate-300 p-3">Github</th>
                         <td class="border border-slate-300 p-3">
-                            <a class="underline decoration-blue-500 text-blue-700 hover:text-blue-300" href="https://github.com/ZunKazaragi">ZunKazaragi</a>
+                            <a target="_blank" class="underline decoration-blue-500 text-blue-700 hover:text-blue-300" href="https://github.com/ZunKazaragi">ZunKazaragi</a>
                         </td>
                     </tr>
                     <tr>
                         <th class="border border-slate-300 p-3">Current Live Project</th>
                         <td class="border border-slate-300 p-3">
-                            <a class="underline decoration-blue-500 text-blue-700 hover:text-blue-300" href="https://carshow.id">Carshow.id</a>
+                            <a target="_blank" class="underline decoration-blue-500 text-blue-700 hover:text-blue-300" href="https://carshow.id">Carshow.id</a>
                         </td>
                     </tr>
                 </table>

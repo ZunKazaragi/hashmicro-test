@@ -37,7 +37,7 @@
                                         class="w-full border rounded text-gray-700 focus:outline-none items-center"></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="price" class="block mb-3">{{ __('Price') }}</label>
+                                    <label for="price" class="block mb-3">{{ __('Price') }} (Rp.)</label>
                                     <input type="text" name="price" x-model="formData.price" id="name" placeholder="..."
                                         class="w-full border rounded text-gray-700 focus:outline-none items-center">
                                 </div>

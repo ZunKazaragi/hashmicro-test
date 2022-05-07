@@ -27,7 +27,7 @@
                                 @foreach ($products as $p)
                                     <tr class="w-1/5">
                                         <td class="border border-slate-300 p-3 font-bold">{{$p->name}}</td>
-                                        <td class="border border-slate-300 p-3">{{$p->price}}</td>
+                                        <td class="border border-slate-300 p-3">Rp.{{number_format($p->price)}}</td>
                                         <td class="border border-slate-300 p-3">{{$p->updated_at ? $p->updated_at->format("d/m/Y H:i") : ''}}</td>
                                         <td class="border border-slate-300 p-3">
                                             <div class="flex justify-end space-x-4">

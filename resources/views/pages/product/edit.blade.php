@@ -34,8 +34,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="border border-slate-300 p-3">Price</th>
-                                        <td class="border border-slate-300 p-3">{{ $product->price }}</td>
+                                        <th class="border border-slate-300 p-3">{{  __('Price') }}</th>
+                                        <td class="border border-slate-300 p-3">Rp.{{ number_format($product->price) }}</td>
                                     </tr>
                                     <tr>
                                         <th class="border border-slate-300 p-3">Created at</th>
@@ -61,7 +61,7 @@
                                         class="w-full border rounded text-gray-700 focus:outline-none items-center"></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="price" class="block mb-3">{{ __('Price') }}</label>
+                                    <label for="price" class="block mb-3">{{ __('Price') }} (Rp.)</label>
                                     <input type="text" name="price" x-model="formData.price" id="name" placeholder="..."
                                         class="w-full border rounded text-gray-700 focus:outline-none items-center">
                                 </div>

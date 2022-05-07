@@ -32,7 +32,7 @@
                                 </tr>
                                 <tr>
                                     <th class="border border-slate-300 p-3">Price</th>
-                                    <td class="border border-slate-300 p-3">{{ $product->price }}</td>
+                                    <td class="border border-slate-300 p-3">Rp.{{ number_format($product->price) }}</td>
                                 </tr>
                                 <tr>
                                     <th class="border border-slate-300 p-3">Created at</th>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlgorithmController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,5 +21,8 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/algorithm', [AlgorithmController::class, 'form'])->name('algoritm.form');
+Route::post('/algorithm_ajax', [AlgorithmController::class, 'logic'])->name('algoritm.logic');
 
 require __DIR__.'/auth.php';

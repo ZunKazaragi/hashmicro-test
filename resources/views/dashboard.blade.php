@@ -40,7 +40,7 @@
 
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
-                <h1 class="text-xl mb-6">About Me</h1>
+                <h1 class="text-xl mb-6">About Me (Jun)</h1>
 
                 <table class="table-fixed w-full border border-slate-400">
                     <tr>

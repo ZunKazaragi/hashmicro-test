@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('pages.product.index');
+        $products = Product::orderBy('updated_at','desc')->paginate(5);
+        return view('pages.product.index', compact('products'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.product.create');
     }
 
     /**
@@ -35,7 +36,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:50',
+            'description' => 'required|string|max:300',
+            'price' => 'required|numeric|min:0'
+        ]);
+        $product = Product::create($validated);
+        return response()->json(compact('product'));
     }
 
     /**
@@ -46,7 +53,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('pages.product.show', compact('product'));
     }
 
     /**
@@ -57,7 +64,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('pages.product.edit', compact('product'));
     }
 
     /**
@@ -69,7 +76,13 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:50',
+            'description' => 'required|string|max:300',
+            'price' => 'required|numeric|min:0'
+        ]);
+        $product = $product->update($validated);
+        return response()->json(compact('product'));
     }
 
     /**
@@ -80,6 +93,10 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $result = $product->delete();
+        if (!$result) {
+            return redirect()->route('product.show', $product->id);
+        }
+        return redirect()->route('product.index');
     }
 }

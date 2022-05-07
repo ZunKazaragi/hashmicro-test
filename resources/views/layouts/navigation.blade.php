@@ -20,7 +20,7 @@
                         {{ __('Algorithm') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('product.index')" :active="request()->routeIs('algorithm.form')">
+                    <x-nav-link :href="route('product.index')" :active="request()->routeIs('product.*')">
                         {{ __('CRUD') }}
                     </x-nav-link>
                 </div>

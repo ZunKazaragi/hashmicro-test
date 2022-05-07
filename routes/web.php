@@ -26,7 +26,8 @@ Route::get('/dashboard', function () {
 Route::get('/algorithm', [AlgorithmController::class, 'form'])->name('algorithm.form');
 Route::post('/algorithm_ajax', [AlgorithmController::class, 'logic'])->name('algorithm.logic');
 
-Route::resource('product', ProductController::class);
+Route::resource('product', ProductController::class)->except('destroy');
+Route::get('/product/{product}/destroy', [ProductController::class, 'destroy'])->name('product.destroy');
 
 
 require __DIR__.'/auth.php';

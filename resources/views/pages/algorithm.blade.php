@@ -40,12 +40,12 @@
                         <div class="mb-6 p-6 bg-white border-b border-gray-200">
                             <form action="{{ route('algorithm.logic') }}" @submit.prevent="submitForm" method="POST">
                                 <div class="mb-6">
-                                    <label for="input1" class="block mb-6">Karakter</label>
+                                    <label for="input1" class="block mb-6">{{ __('Character') }}</label>
                                     <input type="text" name="input1" x-model="formData.input1" id="input1" placeholder="ex: ABBCD" value="ABBCD"
                                         class="w-full border rounded text-gray-700 focus:outline-none items-center">
                                 </div>
                                 <div class="mb-6">
-                                    <label for="input2" class="block mb-6">Referensi</label>
+                                    <label for="input2" class="block mb-6">{{ __('Reference') }}</label>
                                     <input type="text" name="input2" x-model="formData.input2" id="input2" placeholder="ex: Gallant Duck" value="Gallant Duck"
                                         class="w-full border rounded text-gray-700 focus:outline-none items-center">
                                 </div>
@@ -53,7 +53,7 @@
                                 <div class="mb-6">
                                     <button
                                         class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                                        Hitung
+                                        {{ __('Hitung') }}
                                     </button>
                                 </div>
                             </form>
@@ -111,23 +111,6 @@
                     })
                 }
             }
-        }
-
-        async function ajax_post (postUrl, formData) {
-            // clear_error_text()
-            $.ajaxSetup({
-                processData: true,
-                contentType: 'application/x-www-form-urlencoded'
-            });
-            await $.post(postUrl, formData)
-            .done((data) => {
-                console.log(data);
-            })
-            .fail((err) => {
-                console.log(err)
-            });
-
-            return false;
         }
     </script>
 </x-app-layout>
